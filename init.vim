@@ -1,4 +1,10 @@
+set scrolloff=8
 :set number
+:set rnu
+:set tabstop=4 softtabstop=4
+:set shiftwidth=4
+:set expandtab
+:set smartindent
 call plug#begin()
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
@@ -95,5 +101,3 @@ let g:fzf_action = {
   \}
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
-
-
