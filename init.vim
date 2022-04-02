@@ -27,9 +27,11 @@ Plug 'doums/darcula'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 " Initialize plugin system"
-"File searching"
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+"File searching Telescope"
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+"Telescope lisäosa"
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -92,12 +94,5 @@ nnoremap <A-l> <C-w>l
 nnoremap <C-p> :FZF<CR>
 
 
+lua require("lua-config")
 
-
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
-
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
