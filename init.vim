@@ -95,6 +95,7 @@ nnoremap <C-p> :FZF<CR>
 
 
 lua require("lua-config")
+let localmapleader = "\<Space>"
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
