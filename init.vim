@@ -1,3 +1,51 @@
+set scrolloff=8
+set number
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set nobackup
+set nowritebackup
+set cmdheight=2
+set updatetime=300
+set shortmess+=c
+set hidden
+set smarttab
+set cindent
+call plug#begin()
+
+
+
+" The default plugin directory will be as follows:
+"   - Vim (Linux/macOS): '~/.vim/plugged'
+"   - Vim (Windows): '~/vimfiles/plugged'
+"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
+" You can specify a custom plugin directory by passing it as the argument
+"   - e.g. `call plug#begin('~/.vim/plugged')`
+"   - Avoid using standard Vim directory names like 'plugin'
+
+" Make sure you use single quotes
+
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+"Theme"
+
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+" Initialize plugin system
+"File searching Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+"Telescope lisäosa
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-styled-components', 'coc-eslint', 'coc-phpls', 'coc-blade']
+
+
+
+
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
